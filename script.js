@@ -10,10 +10,10 @@ function searchStudents() {
     filteredData.forEach(item => {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
-        listItem.innerHTML = `<a href='${item.link}'>${item["ФИО"]}, ${item["класс"]} (тьютор: ${item["тьютор"]})</a>`;
+        listItem.innerHTML = `<a href='${item.link}'><strong>${item["ФИО"]}<br>${item["класс"]}</strong><br>${item["тьютор"]}</a>`;
         resultsList.appendChild(listItem);
     });
-
+    
     // Если результатов нет, выводим сообщение
     if (filteredData.length === 0 && input) {
         const listItem = document.createElement('li');
@@ -21,34 +21,9 @@ function searchStudents() {
         listItem.textContent = 'Нет результатов';
         resultsList.appendChild(listItem);
     }
+    document.getElementById('countList').textContent=filteredData.length;
 }
-/*
-function searchByTutor() {
-    const input = document.getElementById('tutorSearchInput').value.toLowerCase();
-    const resultsList = document.getElementById('tutorResultsList');
 
-    resultsList.innerHTML = ''; // Очищаем предыдущие результаты
-
-    // Фильтруем данные
-    const filteredData = data.filter(item => item["тьютор"].toLowerCase().includes(input));
-
-    // Отображаем результаты
-    filteredData.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';
-        listItem.innerHTML =  `<a href='${item.link}'>${item["ФИО"]} (тьютор: ${item["тьютор"]})</a>`;
-        resultsList.appendChild(listItem);
-    });
-
-    // Если результатов нет, выводим сообщение
-    if (filteredData.length === 0 && input) {
-        const listItem = document.createElement('li');
-        listItem.className = 'list-group-item';
-        listItem.textContent = 'Нет результатов';
-        resultsList.appendChild(listItem);
-    }
-}
-*/
 
     // Функция для отображения полного списка
     function displayAllStudents() {
@@ -62,9 +37,10 @@ function searchByTutor() {
         data.forEach(item => {
             const listItem = document.createElement('li');
             listItem.className = 'list-group-item';
-            listItem.innerHTML = `<a href='${item.link}'>${item["ФИО"]}, ${item["класс"]} (тьютор: ${item["тьютор"]})</a>`;
+            listItem.innerHTML = `<a href='${item.link}'><strong>${item["ФИО"]}<br>${item["класс"]}</strong><br>${item["тьютор"]}</a>`;
             resultsList.appendChild(listItem);
         });
+        document.getElementById('countList').textContent=data.length;
     }
 
     window.onload = displayAllStudents;

@@ -20,18 +20,18 @@
         }
 
         .logo {
-            font-size: 40px;
-            line-height: 100px;
+            font-size: 35px;
+            line-height: 35px;
         }
 
         .my_header {
-            font-size: 2.5rem;
+            font-size: 2rem;
             /* Размер шрифта */
             color: #4A90E2;
             /* Цвет текста */
-            text-align: center;
+            text-align: right;
             /* Выравнивание по центру */
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             /* Отступ снизу */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
             /* Тень для текста */
@@ -45,9 +45,11 @@
 
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col">
+            <div class="col-3">
                 <img class="image_header" src="logo02.png">
-                <span class="logo text-center my_header">Ученики и тьюторы, 2024-2025</span>
+            </div>
+            <div class="col-9">
+                <h2 class="logo my_header">Ученики и тьюторы<br>2024&nbsp;-&nbsp;2025</h2>
             </div>
         </div>
         <div class="form-group">
@@ -56,7 +58,7 @@
                 oninput="searchStudents()">
         </div>
 
-        <h4>Результаты поиска:</h4>
+        <h4>Результаты поиска(<span id="countList"></span>):</h4>
         <ul id="studentResultsList" class="list-group mb-3"></ul>
 
         <footer class="">
