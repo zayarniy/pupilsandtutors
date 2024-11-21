@@ -11,24 +11,57 @@
         body {
             margin: 20px;
         }
+
+        .image_header {
+            #object-fit: cover;
+            border-radius: 20px;
+            #width: 100px;
+            height: 100px;
+        }
+
+        .logo {
+            font-size: 40px;
+            line-height: 100px;
+        }
+
+        .my_header {
+            font-size: 2.5rem;
+            /* Размер шрифта */
+            color: #4A90E2;
+            /* Цвет текста */
+            text-align: center;
+            /* Выравнивание по центру */
+            margin-bottom: 30px;
+            /* Отступ снизу */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            /* Тень для текста */
+            font-family: 'Arial', sans-serif;
+            /* Шрифт */
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h2 class="text-center">Ученики и тьюторы, 2024-2025</h2>
-
+        <div class="row d-flex justify-content-center">
+            <div class="col">
+                <img class="image_header" src="logo02.png">
+                <span class="logo text-center my_header">Ученики и тьюторы, 2024-2025</span>
+            </div>
+        </div>
         <div class="form-group">
             <!--<label for="studentSearchInput">Поиск:</label>-->
-            <input type="text" class="form-control" id="studentSearchInput" placeholder="Поиск"
+            <input type="text" class="form-control" style="margin-top: 5px;" id="studentSearchInput" placeholder="Поиск"
                 oninput="searchStudents()">
         </div>
 
         <h4>Результаты поиска:</h4>
         <ul id="studentResultsList" class="list-group mb-3"></ul>
 
-        <footer class=""><h6 style="text-align: right;color: #000;;">Горчаковский Лицей МГИМО, 2024</h6></footer>
+        <footer class="">
+            <h6 style="text-align: right;color: #000;;">Горчаковский Лицей МГИМО, 2024</h6>
+        </footer>
 
     </div>
 

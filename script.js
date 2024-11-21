@@ -10,7 +10,7 @@ function searchStudents() {
     filteredData.forEach(item => {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
-        listItem.innerHTML = `<a href='${item.link}'>${item["ФИО"]},${item["класс"]} (тьютор: ${item["тьютор"]})</a>`;
+        listItem.innerHTML = `<a href='${item.link}'>${item["ФИО"]}, ${item["класс"]} (тьютор: ${item["тьютор"]})</a>`;
         resultsList.appendChild(listItem);
     });
 
@@ -62,7 +62,7 @@ function searchByTutor() {
         data.forEach(item => {
             const listItem = document.createElement('li');
             listItem.className = 'list-group-item';
-            listItem.innerHTML = `<a href='${item.link}'>${item["ФИО"]},${item["класс"]} (тьютор: ${item["тьютор"]})</a>`;
+            listItem.innerHTML = `<a href='${item.link}'>${item["ФИО"]}, ${item["класс"]} (тьютор: ${item["тьютор"]})</a>`;
             resultsList.appendChild(listItem);
         });
     }
