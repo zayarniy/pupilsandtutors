@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск учеников и тьюторов</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="data.js"></script>
+    <style>
+        body {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="text-center">Ученики и тьюторы, 2024-2025</h2>
+
+        <div class="form-group">
+            <!--<label for="studentSearchInput">Поиск:</label>-->
+            <input type="text" class="form-control" id="studentSearchInput" placeholder="Поиск"
+                oninput="searchStudents()">
+        </div>
+
+        <h4>Результаты поиска:</h4>
+        <ul id="studentResultsList" class="list-group mb-3"></ul>
+
+        <footer class=""><h6 style="text-align: right;color: #000;;">Горчаковский Лицей МГИМО, 2024</h6></footer>
+
+    </div>
+
+    <!-- Подключение Bootstrap JS и jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
